@@ -1,0 +1,36 @@
+package questoes_andre;
+
+import java.util.Scanner;
+
+public class Vinte_Um {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+	double[] numeros = new double[8];
+	double soma = 0;
+	double media;
+	
+	System.out.println("Digite 8 números");
+	
+	for(int i = 0; i <8; i++) {
+		numeros[i] = sc.nextDouble();
+	soma+=numeros[i];
+	}
+
+	media = soma/8;
+	
+	System.out.println("a média é " + media);
+	
+	for(int i = 0; i <8; i++) {
+		if(numeros[i]<media) {
+	
+		System.out.println(numeros[i]);
+		}
+	sc.close();
+	
+	
+	}
+
+	}
+}
