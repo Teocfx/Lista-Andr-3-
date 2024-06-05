@@ -1,0 +1,24 @@
+package questoes_andre;
+
+import java.util.Scanner;
+
+public class Seis {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("digite dois numeros de um a nove");
+		int numero1 = sc.nextInt();
+		int numero2 = sc.nextInt();
+
+		if (numero1 < 1 || numero1 > 9 || numero2 < 1 || numero2 > 9) {
+			System.out.println(" os numeros devem ser de 1 a nove");
+
+		}
+		int soma = numero1 + numero2;
+		System.out.println("A soma é " + soma);
+
+		sc.close();
+
+	}
+}
