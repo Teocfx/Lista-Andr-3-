@@ -1,0 +1,22 @@
+package questoes_andre;
+
+import java.util.Scanner;
+
+public class Dez {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("digite sua idade");
+		int idade1 = sc.nextInt();
+		int idade2 = sc.nextInt();
+		int idade3 = sc.nextInt();
+		int idade4 = sc.nextInt();
+		int idade5 = sc.nextInt();
+
+	int soma = idade1+ idade2+ idade3+ idade4+ idade5;
+	System.out.println("a soma das idades é " + soma);
+	sc.close();
+	}
+
+}
