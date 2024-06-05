@@ -1,0 +1,23 @@
+package questoes_andre;
+
+import java.util.Scanner;
+
+public class Quinze {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int countCem = 0;
+		for (int i = 0; i < 10; i++) {
+			System.out.println("Digite o número " + (i + 1) + ":");
+			int numero = sc.nextInt();
+
+			if (numero >= 0 && numero <= 100) {
+				countCem++;
+			}
+		}
+
+		System.out.println("O número de números entre 0 e 100 é: " + countCem);
+
+		sc.close();
+	}
+}
