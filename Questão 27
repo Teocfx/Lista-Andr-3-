@@ -1,0 +1,48 @@
+package questoes_andre;
+
+import java.util.Scanner;
+
+public class Vinte_Sete {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		double[] custosMensais = new double[12];
+		String[] meses = { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro",
+				"Outubro", "Novembro", "Dezembro" };
+
+		System.out.println("Digite os custos mensais do ano:");
+		for (int i = 0; i < 12; i++) {
+			System.out.print(meses[i] + ": ");
+			custosMensais[i] = scanner.nextDouble();
+		}
+
+		double maiorGasto = custosMensais[0];
+		double menorGasto = custosMensais[0];
+		int mesMaiorGasto = 0;
+		int mesMenorGasto = 0;
+		double somaGastos = 0;
+
+		for (int i = 0; i < 12; i++) {
+			if (custosMensais[i] > maiorGasto) {
+				maiorGasto = custosMensais[i];
+				mesMaiorGasto = i;
+			}
+			if (custosMensais[i] < menorGasto) {
+				menorGasto = custosMensais[i];
+				mesMenorGasto = i;
+			}
+			somaGastos += custosMensais[i];
+		}
+
+		double mediaGastos = somaGastos / 12;
+
+		System.out.println("O mês de maior gasto foi " + meses[mesMaiorGasto] + " com R$ " + maiorGasto);
+		System.out.println("O mês de menor gasto foi " + meses[mesMenorGasto] + " com R$ " + menorGasto);
+		System.out.println("A média de custo mensal foi R$ " + mediaGastos);
+
+		scanner.close();
+	}
+
+}
