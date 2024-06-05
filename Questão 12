@@ -1,0 +1,24 @@
+package questoes_andre;
+
+import java.util.Scanner;
+
+public class Doze {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int totalPessoas = 12;
+		int contadorMaioresIdade = 0;
+
+		for (int i = 1; i <= totalPessoas; i++) {
+			System.out.print("Digite a idade da pessoa " + i + ": ");
+			int idade = sc.nextInt();
+
+			if (idade >= 18) {
+				contadorMaioresIdade++;
+			}
+		}
+
+		System.out.println("O total de pessoas maiores de idade é: " + contadorMaioresIdade);
+		sc.close();
+	}
+}
