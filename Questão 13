@@ -1,0 +1,30 @@
+package questoes_andre;
+
+import java.util.Scanner;
+
+public class Treze {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String nomeMaisNovo = "";
+        int idadeMaisNovo = 200; 
+        
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Digite o nome da pessoa " + (i + 1) + ":");
+            String nome = sc.nextLine();
+            
+            System.out.println("Digite a idade da pessoa " + (i + 1) + ":");
+            int idade = sc.nextInt();
+            sc.nextLine(); 
+            
+            if (idade < idadeMaisNovo) {
+                idadeMaisNovo = idade;
+                nomeMaisNovo = nome;
+            }
+        }
+        
+        System.out.println("O mais novo é " + nomeMaisNovo + " com " + idadeMaisNovo + " anos.");
+        sc.close();
+    }
+}
