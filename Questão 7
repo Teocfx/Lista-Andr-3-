@@ -1,0 +1,20 @@
+package questoes_andre;
+
+import java.util.Scanner;
+
+public class Sete {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("escreva seu nome");
+		String nome = sc.nextLine();
+
+		for (int i = 0; i < 10; i++) {
+			;
+
+			System.out.println(nome);
+		}
+		sc.close();
+	}
+}
