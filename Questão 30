@@ -1,0 +1,102 @@
+package questoes_andre;
+
+public class Trinta {
+
+    public static void main(String[] args) {
+        // a)
+        char[][] matrizA = criarMatrizA();
+        imprimirMatriz(matrizA);
+
+        // b)
+        char[][] matrizB = criarMatrizB();
+        imprimirMatriz(matrizB);
+
+        // c)
+        char[][] matrizC = criarMatrizC();
+        imprimirMatriz(matrizC);
+
+        // d)
+        char[][] matrizD = criarMatrizD();
+        imprimirMatriz(matrizD);
+
+        // e)
+        char[][] matrizE = criarMatrizE();
+        imprimirMatriz(matrizE);
+    }
+
+    private static char[][] criarMatrizA() {
+        char[][] matriz = new char[4][4];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = '*';
+            }
+        }
+        return matriz;
+    }
+
+    private static char[][] criarMatrizB() {
+        char[][] matriz = new char[4][4];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (i == j || i + j == 3) {
+                    matriz[i][j] = '*';
+                } else {
+                    matriz[i][j] = ' ';
+                }
+            }
+        }
+        return matriz;
+    }
+
+    private static char[][] criarMatrizC() {
+        char[][] matriz = new char[4][4];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (i <= j) {
+                    matriz[i][j] = '*';
+                } else {
+                    matriz[i][j] = ' ';
+                }
+            }
+        }
+        return matriz;
+    }
+
+    private static char[][] criarMatrizD() {
+        char[][] matriz = new char[4][4];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (i >= j) {
+                    matriz[i][j] = '*';
+                } else {
+                    matriz[i][j] = ' ';
+                }
+            }
+        }
+        return matriz;
+    }
+
+    private static char[][] criarMatrizE() {
+        char[][] matriz = new char[4][4];
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (i == j || i + j == 3) {
+                    matriz[i][j] = '*';
+                } else {
+                    matriz[i][j] = ' ';
+                }
+            }
+        }
+        return matriz;
+    }
+
+    private static void imprimirMatriz(char[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+}
