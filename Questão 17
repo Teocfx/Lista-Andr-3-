@@ -6,21 +6,21 @@ public class Dez_Sete {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int soma = 0;
-
-		System.out.println("Digite os números (um número negativo encerra a execução): ");
-
-		while (true) {
-			int numero = sc.nextInt();
-
-			if (numero < 0) {
-				break;
-			}
-
-			soma += numero;
-		}
-
-		System.out.println("A soma dos números é: " + soma);
-		sc.close();
-	}
+		Scanner scanner = new Scanner(System.in);
+        double soma = 0;
+        
+        while (true) {
+            System.out.print("Digite um número (ou um número negativo para encerrar): ");
+            double numero = scanner.nextDouble();
+            
+            if (numero < 0) {
+                break;
+            }
+            
+            soma += numero;
+        }
+        
+        System.out.println("A soma dos números digitados é: " + soma);
+        scanner.close();
+    }
 }
