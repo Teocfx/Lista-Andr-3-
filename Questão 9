@@ -7,29 +7,18 @@ public class Nove {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println(" digite um numero");
-		int num1 = sc.nextInt();
+		Scanner scanner = new Scanner(System.in);
+		int soma = 0;
+		int numeroDeNumeros = 6;
 
-		System.out.println(" digite um numero");
-		int num2 = sc.nextInt();
+		for (int i = 1; i <= numeroDeNumeros; i++) {
+			System.out.print("Digite o número " + i + ": ");
+			int numero = scanner.nextInt();
+			soma += numero;
+		}
 
-		System.out.println(" digite um numero");
-		int num3 = sc.nextInt();
-
-		System.out.println(" digite um numero");
-		int num4 = sc.nextInt();
-
-		System.out.println(" digite um numero");
-		int num5 = sc.nextInt();
-
-		System.out.println(" digite um numero");
-		int num6 = sc.nextInt();
-
-		int soma =  num1 + num2 + num3 + num4 + num5 + num6;
-		System.out.println("o resultado é " + soma);
-
-	} 
-
-	
+		System.out.println("A soma dos números digitados é: " + soma);
+		scanner.close();
+	}
 
 }
